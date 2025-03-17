@@ -103,7 +103,7 @@ CREATE TABLE likes (
 
 ### Exemplos de inserção de dados:
 
-sql```
+```sql
 -- Inserindo usuários
 INSERT INTO users (username, email, password_hash, bio) VALUES ('marcos', 'marcos@cb300.com', 'hash123', 'Apaixonado por motos.');
 
