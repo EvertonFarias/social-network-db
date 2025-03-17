@@ -104,21 +104,20 @@ CREATE TABLE likes (
 ### Exemplos de inserção de dados:
 
 ```sql
--- Inserindo usuários
-INSERT INTO users (username, email, password_hash, bio) VALUES ('marcos', 'marcos@cb300.com', 'hash123', 'Apaixonado por motos.');
+INSERT INTO users (username, email, password_hash, profile_picture, bio)
+VALUES
+('john_doe', 'john.doe@example.com', 'hashed_password_123', 'perfil_1.jpg', 'Olá, sou John Doe!'),
+('jane_smith', 'jane.smith@example.com', 'hashed_password_456', 'perfil_2.jpg', 'Bem-vindo ao meu perfil!');
 
--- Criando uma postagem
-INSERT INTO posts (user_id, content, image_url) VALUES (1, 'Minha nova CB300!', 'http://imagem.com/cb300.jpg');
 
--- Adicionando um amigo
-INSERT INTO friends (user_id, friend_id) VALUES (1, 2);
+-- Posts
+INSERT INTO posts (user_id, content, image_url)
+VALUES
+(1, 'Este é o meu primeiro post!', 'imagem1.jpg'),
+(2, 'Animada para compartilhar meus pensamentos!', 'imagem2.jpg');
 
--- Comentando em um post
-INSERT INTO comments (post_id, user_id, content) VALUES (1, 2, 'Linda moto, Marcos!');
-
--- Curtindo um post
-INSERT INTO likes (post_id, user_id) VALUES (1, 2);
-
+-- Select dos dados na tabela posts
+SELECT * FROM posts;
 ```
 
 
